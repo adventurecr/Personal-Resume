@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Personal Resume</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body style="background-image:url(images/1.jpg);">
+	<div id="a">
+		<div id="b">
+			<ul>
+				<li class="active" id="bb">基本信息</li>
+				<li>专业技能</li>
+				<li>技能证书</li>
+				<li>自我评价</li>
+			</ul>
+			<div class="show" index="3" id="b1">
+				<img src="images/2.jpg">
+				<p>姓名:葛春兰</p>
+				<p>年龄:23</p>
+				<p>学历:；大专</p>
+				<p>求职意向:网页制作</p>
+				<p>专业:计算机信息管理</p>
+				<p>联系电话:18244575412</p>
+				<p>毕业院校:河北软件职业技术学院</p>
+			</div>
+			<div id="c">
+				<p class="c1">MySQL</p>
+				<p>网页制作</p>
+				<p>计算机网络</p>
+				<p>计算机基础</p>
+				<p>TCP/IP协议</p>
+				<p>Java程序设计</p>
+				<p>计算机组成原理</p>
+				<p>数据库操作系统</p>
+				<p>数据库应用技术</p>
+				<p>Web前端技术以及JS框架</p>
+			</div>
+			<div id="d">
+				<p class="d1">普通话证</p>
+				<p>计算机等级证一级</p>
+				<p>计算机网络管理员</p>
+				<p>数据库应用系统工程师</p>
+			</div>
+			<div id="e">
+				<p class="e1">1、较强的适应能力和自学能力.</p>
+				<p>2、较强的动手实践能力和团队协作精神.</p>
+				<p>3、诚实稳重、逻辑清晰、服从公司安排.</p>
+				<p>4、工作认真负责，积极主动，能吃苦耐劳.<p>
+				<p>5、热爱学习、勇于探索、喜欢挑战性的工作.</p>
+			</div>
+		</div>
+		<div id="z">
+			<p>&copy; 2017 Personal Resume 版权归个人所有</p>
+		</div>
+	</div>
+	<script>
+		var tabs=document.getElementById('b');
+		var btns=tabs.getElementsByTagName('li');
+		var divs=tabs.getElementsByTagName('div');
+		for(var i=0;i<btns.length;i++){
+			btns[i].index=i;
+			btns[i].onclick=function (){
+				for(var i=0;i<btns.length;i++){
+					btns[i].className='';
+					divs[i].className='';
+				}
+				this.className='active';
+				divs[this.index].className='show'
+			}
+		}
+	</script>
+</body>
+</html>
